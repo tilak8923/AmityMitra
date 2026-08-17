@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+session.json
+cookies.txt
+config.json
+users.json
+store.json
+debug/
+_to_delete/
+*.log
+.DS_Store

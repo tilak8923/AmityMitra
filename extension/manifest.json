@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Amizon Connect",
+  "version": "0.1.0",
+  "description": "Connects your Amizone account to the Amizon service — timetable, attendance & placement alerts on Telegram.",
+  "permissions": ["cookies", "storage", "alarms", "declarativeNetRequest"],
+  "host_permissions": [
+    "https://s.amizone.net/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Amizon Connect" },
+  "declarative_net_request": {
+    "rule_resources": [{ "id": "referer", "enabled": true, "path": "rules.json" }]
+  }
+}

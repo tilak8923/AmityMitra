@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { width: 300px; margin: 0; padding: 16px; font-family: -apple-system, system-ui, sans-serif; background: #0f1424; color: #e8ecf6; }
+      .brand { font-size: 17px; font-weight: 700; margin: 0 0 2px; } .brand span { color: #5b8cff; }
+      .tag { font-size: 11px; color: #9aa5c4; margin: 0 0 14px; }
+      .card { background: #171d33; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; font-size: 13px; }
+      .ok { color: #34d399; } .bad { color: #fbbf24; }
+      .steps { font-size: 12px; color: #9aa5c4; margin: 4px 0 12px; }
+      button { width: 100%; padding: 11px; margin: 5px 0; border: 0; border-radius: 10px; font-weight: 600; font-size: 14px; cursor: pointer; }
+      .primary { background: #5b8cff; color: #fff; } .primary:hover { background: #7aa2ff; }
+      .amiz { background: #f4a825; color: #1a1200; }
+      .ghost { background: #232a45; color: #e8ecf6; }
+      pre { background: #0a0f1f; border-radius: 8px; padding: 10px; font-size: 12px; white-space: pre-wrap; margin: 8px 0 0; display: none; }
+      .msg { font-size: 11px; color: #9aa5c4; text-align: center; margin-top: 4px; min-height: 14px; }
+      hr { border: 0; border-top: 1px solid #2a3358; margin: 12px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="brand">Amiz<span>on</span></div>
+    <div class="tag">Your timetable, attendance &amp; placement alerts on Telegram.</div>
+
+    <div class="card" id="amizStatus">Checking Amizone…</div>
+    <button id="loginBtn" class="amiz">🔓 Log in to Amizone</button>
+
+    <hr />
+
+    <div class="card" id="tgStatus">Checking Telegram…</div>
+    <button id="connectBtn" class="primary">💬 Connect to Telegram</button>
+    <div class="steps">Opens the bot — just tap <b>Start</b>. That’s it.</div>
+
+    <pre id="preview"></pre>
+
+    <hr />
+    <button id="syncBtn" class="ghost">🔄 Sync now</button>
+    <div class="msg" id="syncMsg"></div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
